@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    /* height: 85vh; */
+    gap: 10px;
+    position: relative;
+}
+
+
+/* Left side panel and its components styling */
+
+.left-panel {
+    width: 22vw;
+    max-height: 80vh;
+    color: white;
+}
+
+.home-container {
+    height: 20vh;
+    background-color: #121212;
+}
+
+.library {
+    min-height: 60vh;
+    background-color: #121212;
+    position: relative;
+}
+
+.library-title {
+    font-size: 20px;
+    color: #a7a7a7;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.svg {
+    width: 30px;
+}
+
+.svg2 {
+    width: 20px;
+}
+
+.home-desc {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.footer ul {
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.footer ul li {
+    font-size: 12px;
+    color: gray;
+}
+
+
+/* Right side panel and its components styling */
+
+.right-panel {
+    width: 76vw;
+    min-height: 84vh;
+    background-color: #121212;
+}
+
+.header {
+    background-color: #121212;
+    height: 9vh;
+    justify-content: space-between;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.nav-bg {
+    height: 30px;
+    width: 30px;
+    background-color: #090909;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icon {
+    gap: 20px;
+}
+
+.login {
+    background-color: white;
+    color: black;
+}
+
+.login:hover {
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: whitesmoke;
+}
+
+.signup {
+    color: #a7a7a7;
+}
+
+.signup:hover {
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.playlist {
+    background-color: #1e1e1e;
+}
+
+.playlist-heading {
+    padding: 5px 15px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.playlist-heading:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.card-container {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    border-radius: 8px;
+    width: 170px;
+    height: 250px;
+    background-color: #151515;
+    padding: 10px;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.song-title {
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.song-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    margin: 8px 0px;
+}
+
+.play-icon {
+    width: 30px;
+    background-color: #1ed760;
+    border-radius: 50%;
+    padding: 7px;
+    position: absolute;
+    right: 15px;
+    bottom: 90px;
+    opacity: 0;
+}
+
+@keyframes play {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+}
+
+.card:hover {
+    background: rgb(90, 87, 87);
+    .play-icon {
+        animation: play 1s forwards;
+    }
+}
+
+.play-icon-img {
+    width: 100%;
+}
+
+.home-desc:hover {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}

@@ -1,6 +1,6 @@
 let currentSong = new Audio();
 
-
+let songs;
 
 function secondsToMinutesSeconds(seconds) {
     if (isNaN(seconds) || seconds < 0) {
@@ -58,7 +58,7 @@ const playMusic = (track, pause = false, count) => {
 }
 
 async function main() {
-    let songs = await getSongs();
+    songs = await getSongs();
 
 
     playMusic(songs[0], true, 1);
@@ -121,6 +121,32 @@ async function main() {
         currentSong.currentTime = (currentSong.duration * seekPercent) / 100;
     })
 
+    document.querySelector(".hamburger").addEventListener("click", () => {
+        document.querySelector(".left-panel").style.left = 0 + "%";
+
+    })
+
+    document.querySelector(".close").addEventListener("click", (e) => {
+        console.log("clicked")
+        document.querySelector(".left-panel").style.left = (-100) + "%";
+
+    })
+
+    previous.addEventListener("click", () => {
+        let index = songs.indexOf(currentSong.src.split("/").splice(-1)[0])
+        if (index - 1 >= 0) {
+            playMusic(songs[index - 1])
+        }
+
+    })
+
+    next.addEventListener("click", () => {
+        let index = songs.indexOf(currentSong.src.split("/").splice(-1)[0])
+        if (index < songs.length - 1) {
+            playMusic(songs[index + 1])
+        }
+
+    })
 
 }
 

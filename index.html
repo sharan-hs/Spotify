@@ -8,14 +8,17 @@
     <title>Spotify</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="utility.css" />
+    <link rel="stylesheet" href="mobile.css">
 </head>
 
 <body>
     <div class="container flex m-1">
         <div class="left-panel round">
             <div class="home-container round p-1">
-                <div class="logo invert m-2">
-                    <img src="svg/logo.svg" alt="" />
+
+                <div class="logo invert m-2 flex">
+                    <img class="logo-img" src="svg/logo.svg" alt="" />
+                    <img class="close invert" src="svg/close.svg" alt="">
                 </div>
                 <div class="home flex align gap m-1">
                     <img class="svg invert" src="svg/home.svg" alt="" />
@@ -52,6 +55,9 @@
         <div class="right-panel round">
             <div class="header align flex">
                 <div class="nav-icon flex m-1 p-1">
+                    <div class="hamburger">
+                        <img class="invert" src="svg/hamburger.svg" alt="">
+                    </div>
                     <div class="nav-bg flex gap">
                         <img class="svg2 invert" src="svg/left.svg" alt="" />
                     </div>
@@ -122,7 +128,7 @@
 
                     </div>
 
-                    <div class="playbar-icons flex gap invert">
+                    <div class="playbar-icons flex gap invert align">
                         <img id="previous" class="song-nav-icons" src="svg/prev.svg" alt="">
                         <img id="play" class="playIcon" src="svg/playicon.svg" alt="">
                         <img id="next" class="song-nav-icons" src="svg/next.svg" alt="">

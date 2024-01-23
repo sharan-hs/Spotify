@@ -37,7 +37,12 @@ body {
     color: #a7a7a7;
 }
 
-.logo img {
+.logo {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-img {
     width: 80px;
 }
 
@@ -52,6 +57,10 @@ body {
 .home-desc {
     font-size: 18px;
     font-weight: bold;
+}
+
+.close {
+    display: none;
 }
 
 .footer {
@@ -220,13 +229,18 @@ body {
 }
 
 .playbar-icons {
-    justify-content: center;
     padding: 5px;
     cursor: pointer;
+    width: 500px;
+    justify-content: center;
 }
 
 .song-nav-icons {
     width: 20px;
+}
+
+.songname {
+    width: 260px;
 }
 
 .seekbar {
@@ -293,4 +307,8 @@ body {
     padding: 7px;
     width: 22px;
     height: 22px;
+}
+
+.hamburger {
+    display: none;
 }

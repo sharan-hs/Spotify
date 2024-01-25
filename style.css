@@ -229,9 +229,10 @@
     }
     
     .playbar {
-        width: 75vw;
+        width: 76vw;
         max-height: 12vh;
-        background-color: #0b0e06;
+        /* background-color: #0b0e06; */
+        background-color: #231919;
         position: fixed;
         border-radius: 5px;
         bottom: 10px;
@@ -298,6 +299,7 @@
         width: 280px;
         position: relative;
         margin-bottom: 20px;
+        border: 2px solid white;
     }
     
     .playlist-song:hover {
@@ -315,7 +317,8 @@
     
     .playlist-play-icon {
         position: absolute;
-        right: 0px;
+        right: 7px;
+        top: 12px;
     }
     
     .songList {
@@ -346,4 +349,10 @@
     
     .volume input {
         cursor: pointer;
+    }
+    
+     ::-webkit-scrollbar {
+        width: 5px;
+        /* Adjust the width as needed */
+        background-color: rgb(112, 84, 84);
     }

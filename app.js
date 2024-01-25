@@ -107,9 +107,11 @@ async function displayAlbums() {
         }
     }
 
+
     Array.from(document.getElementsByClassName("card")).forEach((e) => {
         e.addEventListener("click", async(item) => {
             songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`);
+            document.querySelector(".songname>span").innerHTML = decodeURI(songs[0]);
         });
     });
 }
@@ -167,7 +169,7 @@ async function main() {
     });
 
     document.querySelector(".close").addEventListener("click", (e) => {
-        console.log("clicked");
+
         document.querySelector(".left-panel").style.left = -100 + "%";
     });
 
@@ -215,6 +217,13 @@ async function main() {
                 .getElementsByTagName("input")[0].value = 20;
         }
     });
+
+
+
+
+
+
+
 }
 
 main();

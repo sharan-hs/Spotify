@@ -3,12 +3,12 @@
     padding: 0;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1400px) {
     .left-panel {
         position: absolute;
         left: -100%;
         transition: all 0.4s;
-        z-index: 1;
+        z-index: 3;
         width: 350px;
         background-color: black;
     }
@@ -17,7 +17,8 @@
         margin: 10px;
     }
     .playbar {
-        width: 90vw;
+        width: 95vw;
+        margin-bottom: 40px;
         /* position: relative; */
     }
     .playbar-icons {
@@ -31,5 +32,71 @@
         display: block;
         cursor: pointer;
         height: 20px;
+    }
+    .container {
+        position: relative;
+    }
+    .library {
+        min-height: 74vh;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    /* Your styles go here */
+    .playlist {
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 0;
+    }
+    .header {
+        position: sticky;
+        z-index: 5;
+        top: 0px;
+    }
+    .left-panel {
+        z-index: 10;
+    }
+    .gap {
+        gap: 0px;
+    }
+    .btn {
+        padding: 7px 18px;
+    }
+    .card-container {
+        justify-content: center;
+        padding-bottom: 20vh;
+    }
+    .playbar {
+        width: 90vw;
+        flex-direction: column;
+        align-items: center;
+        min-height: 20vh;
+    }
+    .playbar-icons {
+        gap: 20px;
+    }
+    .songname span {
+        padding: 0px 20px;
+        margin-top: 20px;
+    }
+    .songname {
+        padding: 0px;
+    }
+    .songtime {
+        margin: 0px 40px;
+        padding: 5px 0px;
+    }
+    .seekbar {
+        height: 7px;
+        border-radius: 5px;
+        width: 90%;
+        background-color: #7a7575;
+        cursor: pointer;
+        position: absolute;
+        bottom: 50px;
     }
 }
